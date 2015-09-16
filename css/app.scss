@@ -3,6 +3,39 @@
 # only Main files contain this front matter, not partials.
 ---
 
+$white: #fff;
+$black: #000;
+$main-color: #7A588D;
+
+$transparent: rgba(0,0,0,0) !default;
+
+
 body {
-  background-color: #7A588D;
+  background-color: $main-color;
+  color: $white;
+}
+
+.twitter-icon {
+  margin-right: rem-calc(5);
+  width: rem-calc(30);
+}
+
+a {
+  color: $white;
+  // font-size: $h5-font-size;
+  letter-spacing: 0.1em;
+  padding: rem-calc(3) 0;
+  text-transform: uppercase;
+  font-weight: 300;
+  border-bottom: 2px solid transparent;
+
+  &:hover,
+  &.is-active-page {
+    border-color: $white;
+  }
+
+  &:active {
+    border-color: $yellow;
+    color: $yellow;
+  }
 }
