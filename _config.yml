@@ -1,0 +1,5 @@
+gems:
+  - jekyll-sitemap
+
+# Outputting
+permalink: pretty
