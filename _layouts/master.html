@@ -18,44 +18,16 @@
     {% include twitter_card.html %}
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/foundation/5.5.0/js/foundation.min.js"></script>
-    
+
     <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.6/keen.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/javascript/bps_keen.js"></script>
     <script type="text/javascript">
 var client = new Keen({
  projectId: "55fae9ef46f9a725f7696fa2", // String (required always)
  writeKey: "559549e75726635744db58eb4827c2dd6928de900a30b72ff261c8380915112c09c5ec87f0da41a701c728e9f8146f8b0f55f97cd046edfeaf9b43d6b62a4a654121c33234f28b69c4006a3383f2fede3e07acc7322c15f0c57fc9972e49a73666f7f610344bc246d22330ec52f38496",   // String (required for sending data)
 });
 $(function() {
- client.addEvent("page-load", {
-"user_agent" : "${keen.user_agent}",
-"ip_address" : "${keen.ip}",
-"page_url" : window.location.href,
-"keen" : {
- "addons" : [
-   {
-     "name" : "keen:ua_parser",
-     "input" : {
-       "ua_string" : "user_agent"
-     },
-     "output" : "parsed_user_agent"
-   },
-   {
-     "name" : "keen:ip_to_geo",
-     "input" : {
-       "ip" : "ip_address"
-     },
-     "output" : "ip_geo_info"
-   },
-   {
-     "name" : "keen:url_parser",
-     "input" : {
-       "url" : "page_url"
-     },
-     "output" : "parsed_page_url"
-   }
- ]
-}
- });
+  client.addEvent("page-load", keen_obj());
 });
 </script>
 
