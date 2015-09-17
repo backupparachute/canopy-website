@@ -66,4 +66,15 @@ a {
   background-color: $transparent;
   color: $white;
   border: 1px solid $white;
+
+  &:hover {
+    color: $main-color;
+    border-color: $white;
+    background-color: $white;
+  }
+
+}
+
+input.large {
+  font-size: 2em;
 }
