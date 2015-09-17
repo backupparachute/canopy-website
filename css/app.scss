@@ -61,3 +61,9 @@ a {
    margin-right: auto;
    max-width: initial;
 }
+
+.button .ghost {
+  background-color: $transparent;
+  color: $white;
+  border: 1px solid $white;
+}
