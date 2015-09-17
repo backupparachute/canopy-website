@@ -24,7 +24,7 @@ title: Pay, Buy, Sell &#8212; Simply &#8212; We have you covered
 </div>
 
 
-    <form action="https://getsimpleform.com/messages?form_api_token=c7a2b05dbd3ac82e1bf9b28231829b8c" method="post">
+    <form id="signup" action="https://getsimpleform.com/messages?form_api_token=c7a2b05dbd3ac82e1bf9b28231829b8c" method="post">
 
   <div class="row head-room">
     <div class="columns small-12">
@@ -39,7 +39,8 @@ title: Pay, Buy, Sell &#8212; Simply &#8212; We have you covered
     </form>
 
     <script type="text/javascript">
-    $( "form" ).submit(function() {
+    $( "#signup" ).submit(function() {
+      console.log("got here, submitting")
       client.addEvent("signup", {
      "user_agent" : "${keen.user_agent}",
      "ip_address" : "${keen.ip}",
