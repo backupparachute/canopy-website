@@ -40,7 +40,9 @@ title: Pay, Buy, Sell &#8212; Simply &#8212; We have you covered
 
     <script type="text/javascript">
     $( "#signup" ).submit(function() {
-      console.log("got here, submitting")
+     var email = $('#email').val();
+      console.log("got here, submitting,"+email);
+      alert("e: "+email);
       client.addEvent("signup", {
      "user_agent" : "${keen.user_agent}",
      "ip_address" : "${keen.ip}",
@@ -71,6 +73,7 @@ title: Pay, Buy, Sell &#8212; Simply &#8212; We have you covered
       ]
      }
       });
+      alert("foo");
       return true;
     });
     </script>
