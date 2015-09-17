@@ -46,6 +46,7 @@ title: Pay, Buy, Sell &#8212; Simply &#8212; We have you covered
       client.addEvent("signup", {
      "user_agent" : "${keen.user_agent}",
      "ip_address" : "${keen.ip}",
+     "page_url" : window.location.href,
      "email" : $('#email').val(),
      "keen" : {
       "addons" : [
