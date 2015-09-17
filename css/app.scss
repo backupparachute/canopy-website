@@ -18,14 +18,13 @@ body {
   // margin: 0 0 100px; /* bottom = footer height */
 }
 
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 200px;
-    width: 100%;
-    vertical-align: bottom;
-}
+// footer {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     height: 100px;
+//     width: 100%;
+// }
 
 .twitter-icon {
   margin-right: rem-calc(5);
@@ -44,6 +43,8 @@ a {
   &:hover,
   &.is-active-page {
     border-color: $white;
+    color: $white;
+    background-color: $highlight-light-color;
   }
 
   &:active {
