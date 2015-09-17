@@ -6,6 +6,7 @@
 $white: #fff;
 $black: #000;
 $main-color: #7A588D;
+$highlight-light-color: #62ABA2;
 
 $transparent: rgba(0,0,0,0) !default;
 
@@ -13,20 +14,21 @@ $transparent: rgba(0,0,0,0) !default;
 body {
   background-color: $main-color;
   color: $white;
-  margin: 0 0 100px; /* bottom = footer height */
+  font-family: 'Lato', 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;`
+  // margin: 0 0 100px; /* bottom = footer height */
 }
 
-footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-}
+// footer {
+//     position: absolute;
+//     left: 0;
+//     bottom: 0;
+//     height: 100px;
+//     width: 100%;
+// }
 
 .twitter-icon {
   margin-right: rem-calc(5);
-  width: rem-calc(30);
+  width: 32px;
 }
 
 a {
@@ -43,8 +45,8 @@ a {
     border-color: $white;
   }
 
-  // &:active {
-  //   border-color: $yellow;
-  //   color: $yellow;
-  // }
+  &:active {
+    border-color: $highlight-light-color;
+    color: $highlight-light-color;
+  }
 }
